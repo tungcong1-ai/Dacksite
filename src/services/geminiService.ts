@@ -1,16 +1,4 @@
-const callGemini = async (prompt) => {
-  const res = await fetch("/api/gemini", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ prompt }),
-  });
-
-  const data = await res.json();
-
-  return data?.candidates?.[0]?.content?.parts?.[0]?.text;
-};
+import { GoogleGenAI } from "@google/genai";
 
 const enhancePrompt = async (text: string, isComic: boolean = false): Promise<string> => {
   const apiKey = process.env.GEMINI_API_KEY;
