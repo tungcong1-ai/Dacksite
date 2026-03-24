@@ -1,0 +1,7 @@
+{
+  "name": "Remix: Trình Tạo Ảnh AI",
+  "description": "Ứng dụng tạo hình ảnh từ văn bản sử dụng công nghệ AI của Google Gemini.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
